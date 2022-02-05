@@ -1,9 +1,3 @@
 # Directories to exclude
-bin
-include
-lib
-lib64
-share
 
 # Files to exclude
-pyvenv.cfg
