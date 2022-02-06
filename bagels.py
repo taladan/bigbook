@@ -67,18 +67,18 @@ def get_clues(guess: str, secret: str) -> str:
     else:
         response = []
 
-        for char in range(len(guess)):
-            if guess[char] == secret[char]:
+        for i, _ in enumerate(guess):
+            if guess[i] == secret[i]:
                 # Correct character, correct position
                 response.append("Fermi")
             # Correct character, incorrect position
-            elif guess[char] in secret:
+            elif guess[i] in secret:
                 response.append("Pico")
         if len(response) == 0:
             # No correct characters
             response = ["Bagel"]
         else:
-            response.sort()
+            sorted(set(response))
 
     return " ".join(response)
 
