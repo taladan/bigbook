@@ -3,6 +3,7 @@ bin
 lib
 lib64
 share
+testing
 
 # Files to exclude
 pyvenv.cfg
